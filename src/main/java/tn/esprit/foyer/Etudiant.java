@@ -2,9 +2,11 @@ package tn.esprit.foyer;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 
@@ -22,4 +24,7 @@ public class Etudiant implements Serializable {
 
     public Etudiant() {
     }
+    @ManyToMany (mappedBy="etudiants")
+
+    private Set<Reservation> reservations;
 }

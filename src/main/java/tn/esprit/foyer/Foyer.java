@@ -1,8 +1,9 @@
 package tn.esprit.foyer;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Set;
+
 @Entity
 
 public class Foyer implements Serializable {
@@ -17,7 +18,10 @@ public class Foyer implements Serializable {
 
         public Foyer() {
         }
-
+        @OneToOne(mappedBy="foyer")
+        private University university;
+        @OneToMany( mappedBy="foyer")
+        private Set<Bloc> blocs;
 
 
 }

@@ -2,6 +2,7 @@ package tn.esprit.foyer;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 import java.io.Serializable;
 
@@ -18,5 +19,7 @@ public class University implements Serializable {
 
     public University() {
     }
+    @OneToOne 
+    private Foyer foyer;
 }
 

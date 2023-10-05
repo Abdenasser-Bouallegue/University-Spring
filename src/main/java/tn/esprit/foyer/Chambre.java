@@ -1,12 +1,10 @@
 package tn.esprit.foyer;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Set;
 
 
 @Entity
@@ -27,5 +25,9 @@ public class Chambre implements Serializable {
 
     public Chambre() {
     }
+    @ManyToOne
+    Bloc bloc;
+    @OneToMany
+    private Set<Reservation> reservations;
 }
 
