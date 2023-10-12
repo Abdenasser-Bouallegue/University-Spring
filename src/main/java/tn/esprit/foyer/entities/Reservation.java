@@ -1,4 +1,4 @@
-package tn.esprit.foyer;
+package tn.esprit.foyer.entities;
 
 
 import jakarta.persistence.Entity;
