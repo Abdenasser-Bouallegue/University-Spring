@@ -1,28 +1,28 @@
-package tn.esprit.foyer.entities;
+    package tn.esprit.foyer.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
+    import jakarta.persistence.Entity;
+    import jakarta.persistence.Id;
+    import jakarta.persistence.ManyToOne;
+    import jakarta.persistence.OneToMany;
 
-import java.io.Serializable;
-import java.util.Set;
+    import java.io.Serializable;
+    import java.util.Set;
 
-@Entity
+    @Entity
 
-public class Bloc implements Serializable {
+    public class Bloc implements Serializable {
 
 
-    //properties
-    @Id
-    private Long idBloc;
-    private String NomBloc;
-    private Long CapacityBloc;
+        //properties
+        @Id
+        private Long idBloc;
+        private String NomBloc;
+        private Long CapacityBloc;
 
-    public Bloc() {
+        public Bloc() {
+        }
+        @ManyToOne
+        Foyer foyer;
+        @OneToMany( mappedBy="bloc")
+        private Set<Chambre> chambres;
     }
-    @ManyToOne
-    Foyer foyer;
-    @OneToMany( mappedBy="bloc")
-    private Set<Chambre> chambres;
-}

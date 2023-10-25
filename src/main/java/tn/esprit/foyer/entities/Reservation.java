@@ -18,7 +18,7 @@ public class Reservation implements Serializable {
     @Id
     private Long idReservation;
     private Date AnneeUniversitaire;
-    private Boolean estVlaide;
+    private Boolean estValide;
 
 
     public Reservation() {
