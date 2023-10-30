@@ -9,7 +9,7 @@ import tn.esprit.foyer.entities.University;
 import java.util.List;
 
 public interface BlocRepository extends JpaRepository<Bloc,Long> {
-    Bloc findByNomBloc(String nom);
+    //Bloc findByNomBloc(String nom);
     @Query("SELECT b FROM Bloc b " +
             "JOIN b.foyer f " +
             "WHERE f.university = :universityName")

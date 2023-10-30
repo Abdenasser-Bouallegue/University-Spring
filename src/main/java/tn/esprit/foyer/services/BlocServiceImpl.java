@@ -1,7 +1,9 @@
 package tn.esprit.foyer.services;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BlocServiceImpl {
+@AllArgsConstructor
+public class BlocServiceImpl implements IBlocService {
 }

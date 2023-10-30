@@ -1,7 +1,9 @@
 package tn.esprit.foyer.services;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ChambreServiceImpl {
+@AllArgsConstructor
+public class ChambreServiceImpl implements IChambreService{
 }
